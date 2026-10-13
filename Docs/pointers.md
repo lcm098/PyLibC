@@ -20,6 +20,7 @@ because it, by default, allocates (4 bytes) of memory for an int,
 in the background, and it returns an address as a (signed long) address.
 
 > **Pointer.ptr_fint(address)**
+ptr_fint means "pointer free integer".
 ptr_fint free reserved memory of pointer on heap.
 If you forget to free it, it will cause a memory leak
 
@@ -30,6 +31,7 @@ Pointer.ptr_fint(ptr1)
 ```
 
 > **Pointer.ptr_wint(address, value)**
+ptr_wint means "pointer write integer".
 ptr_wint takes two parameters: firstly, an address as a long,
 and secondly, a value of int. ptr_wint is responsible for
 writing an int value in heap memory; it automatically dereferences

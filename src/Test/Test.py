@@ -1,5 +1,6 @@
 
 from src.pointers.ptr import Pointer
+from src.pointers.ptr import Type
 
 
 # ptr1 = Pointer.ptr_aint()
@@ -41,25 +42,35 @@ from src.pointers.ptr import Pointer
 
 
 
-SIZE = 10
-base = Pointer.ptr_aint_array(SIZE)
-last_addr = Pointer.ptr_get_last(base, SIZE)
+# SIZE = 10
+# base = Pointer.ptr_aint_array(SIZE)
+# last_addr = Pointer.ptr_get_last(base, SIZE)
 
-if base != 0:
+# if base != 0:
 
-    try:
-        count = 0
-        ptr1 = base
+#     try:
+#         count = 0
+#         ptr1 = base
 
-        while ptr1 <= last_addr:
-            Pointer.ptr_wint(ptr1, count * 10)
-            ptr1 = Pointer.ptr_add_byte(ptr1, 4)
-            count += 1
+#         while ptr1 <= last_addr:
+#             Pointer.ptr_wint(ptr1, count * 10)
+#             ptr1 = Pointer.ptr_add_byte(ptr1, 4)
+#             count += 1
 
-        ptr1 = base
-        while ptr1 <= last_addr:
-            print(Pointer.ptr_rint(ptr1))
-            ptr1 = Pointer.ptr_add_byte(ptr1, 4)
+#         ptr1 = base
+#         while ptr1 <= last_addr:
+#             print(Pointer.ptr_rint(ptr1))
+#             ptr1 = Pointer.ptr_add_byte(ptr1, 4)
 
-    finally:
-        Pointer.ptr_fint_array(base)
+#     finally:
+#         Pointer.ptr_fint_array(base)
+
+
+
+
+
+
+score_track = Pointer.ptr_aint(size=Type.dtype["i32"])
+Pointer.ptr_wint(score_track, 555)
+print(Pointer.ptr_rint(score_track))
+Pointer.ptr_fint(score_track)

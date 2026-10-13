@@ -14,6 +14,13 @@ from ptr import Pointer as _CPointer   # C# class, renamed
 import System
 
 
+
+class Type:
+    dtype = {
+        "i8": 1, "u8": 1, "i16" : 2, "u16": 2,
+        "u32": 4, "i32": 4, "u64": 8, "i64" : 8
+    }
+
 class Pointer:
 
     """

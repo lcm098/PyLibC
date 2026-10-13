@@ -1,0 +1,12 @@
+/home/marxist/Desktop/code/PyLibC/PyLibC/obj/Debug/net10.0/PyLibC.csproj.AssemblyReference.cache
+/home/marxist/Desktop/code/PyLibC/PyLibC/obj/Debug/net10.0/PyLibC.GeneratedMSBuildEditorConfig.editorconfig
+/home/marxist/Desktop/code/PyLibC/PyLibC/obj/Debug/net10.0/PyLibC.AssemblyInfoInputs.cache
+/home/marxist/Desktop/code/PyLibC/PyLibC/obj/Debug/net10.0/PyLibC.AssemblyInfo.cs
+/home/marxist/Desktop/code/PyLibC/PyLibC/obj/Debug/net10.0/PyLibC.csproj.CoreCompileInputs.cache
+/home/marxist/Desktop/code/PyLibC/PyLibC/bin/Debug/net10.0/PyLibC.deps.json
+/home/marxist/Desktop/code/PyLibC/PyLibC/bin/Debug/net10.0/PyLibC.dll
+/home/marxist/Desktop/code/PyLibC/PyLibC/bin/Debug/net10.0/PyLibC.pdb
+/home/marxist/Desktop/code/PyLibC/PyLibC/obj/Debug/net10.0/PyLibC.dll
+/home/marxist/Desktop/code/PyLibC/PyLibC/obj/Debug/net10.0/refint/PyLibC.dll
+/home/marxist/Desktop/code/PyLibC/PyLibC/obj/Debug/net10.0/PyLibC.pdb
+/home/marxist/Desktop/code/PyLibC/PyLibC/obj/Debug/net10.0/ref/PyLibC.dll

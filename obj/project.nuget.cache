@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "YogbLS5yayE=",
+  "success": true,
+  "projectFilePath": "/home/marxist/Desktop/code/PyLibC/PyLibC/PyLibC.csproj",
+  "expectedPackageFiles": [
+    "/home/marxist/.nuget/packages/pythonnet/3.2.1/pythonnet.3.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}

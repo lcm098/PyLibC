@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "PyLibC/1.0.0": {
+        "dependencies": {
+          "pythonnet": "3.2.1"
+        },
+        "runtime": {
+          "PyLibC.dll": {}
+        }
+      },
+      "pythonnet/3.2.1": {
+        "runtime": {
+          "lib/netstandard2.0/Python.Runtime.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PyLibC/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "pythonnet/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pipKytLDrYD/PyA+QdfB2Q3ysziIOQAc6QFJbqBZP/CW1mZDHNoo1nIOgA4DFHJtUGUzUVp59ZzwRDWXrfJvyA==",
+      "path": "pythonnet/3.2.1",
+      "hashPath": "pythonnet.3.2.1.nupkg.sha512"
+    }
+  }
+}

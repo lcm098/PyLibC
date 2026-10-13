@@ -27,8 +27,8 @@ class Pointer:
         INT
     """
     @staticmethod
-    def ptr_aint(size=4):
-        return _CPointer.AllocInt(System.UIntPtr(size))
+    def ptr_aint():
+        return _CPointer.AllocInt()
 
     @staticmethod
     def ptr_wint(address, value):
@@ -48,7 +48,7 @@ class Pointer:
 
     @staticmethod
     def ptr_along(size=8):
-        return _CPointer.AllocLong(System.UIntPtr(size))
+        return _CPointer.AllocLong()
 
     @staticmethod
     def ptr_wlong(address, value):

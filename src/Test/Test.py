@@ -70,7 +70,7 @@ from src.pointers.ptr import Type
 
 
 
-score_track = Pointer.ptr_aint(size=Type.dtype["i32"])
+score_track = Pointer.ptr_aint()
 Pointer.ptr_wint(score_track, 555)
 print(Pointer.ptr_rint(score_track))
 Pointer.ptr_fint(score_track)

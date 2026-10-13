@@ -6,7 +6,6 @@ using System.Runtime.InteropServices;
 
 namespace ptr {
     public static unsafe class Pointer {
-
         private static void Check(long address) {
             if (address == 0)
                 throw new NullReferenceException("Null pointer dereference");
@@ -16,8 +15,8 @@ namespace ptr {
             FOR INT
          */
 
-        public static long AllocInt(nuint size) {
-            void *__ptr__ = NativeMemory.AllocZeroed(size);
+        public static long AllocInt() {
+            void *__ptr__ = NativeMemory.AllocZeroed((nuint) 4);
             return (long)__ptr__;
         }
 
@@ -38,8 +37,8 @@ namespace ptr {
         /*
             FOR LONG
          */
-        public static long AllocLong(nuint size) {
-            void *__ptr__ = NativeMemory.AllocZeroed(size);
+        public static long AllocLong() {
+            void *__ptr__ = NativeMemory.AllocZeroed((nuint) 8);
             return (long)__ptr__;
         }
 

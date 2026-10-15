@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PyLibC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc9df82abfefccfe27bb77d7babd689722d29c00")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+717347a1a041dada92a308bb0575df9d14694308")]
 [assembly: System.Reflection.AssemblyProductAttribute("PyLibC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PyLibC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

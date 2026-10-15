@@ -51,3 +51,19 @@ class Pointer:
     @staticmethod
     def ptr_free(address):
         _CPointer.ptr_free(address)
+
+    @staticmethod
+    def series_fork(size, type):
+        return _CPointer.series_fork(size, type)
+
+    @staticmethod
+    def ptr_add(address, type):
+        return _CPointer.ptr_add(address, type)
+
+    @staticmethod
+    def ptr_sub(address, type):
+        return _CPointer.ptr_sub(address, type)
+
+    @staticmethod
+    def ptr_last_addr(address, size, type):
+        return _CPointer.ptr_last_addr(address, size, type)

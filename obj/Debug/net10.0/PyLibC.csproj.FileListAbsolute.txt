@@ -10,3 +10,4 @@
 /home/marxist/Desktop/code/PyLibC/PyLibC/obj/Debug/net10.0/refint/PyLibC.dll
 /home/marxist/Desktop/code/PyLibC/PyLibC/obj/Debug/net10.0/PyLibC.pdb
 /home/marxist/Desktop/code/PyLibC/PyLibC/obj/Debug/net10.0/ref/PyLibC.dll
+/home/marxist/Desktop/code/PyLibC/PyLibC/obj/Debug/net10.0/PyLibC.sourcelink.json

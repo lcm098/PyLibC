@@ -10,7 +10,7 @@ namespace ptr {
         // Private helpers (nuint yahin tak limited hai)
         // ---------------------------------------------------------
 
-        private static void Check(nuint address) {
+        private static void Check(ulong address) {
             if (address == 0)
                 throw new NullReferenceException("Null pointer dereference");
         }
@@ -39,7 +39,7 @@ namespace ptr {
             _ => throw new ArgumentException("Unsupported type", nameof(type))
         };
 
-        private static void* Resolve(nuint address, int level)
+        private static void* Resolve(ulong address, int level)
         {
             if (level < 1)
                 throw new ArgumentOutOfRangeException(nameof(level), "Level must be >= 1");
@@ -47,7 +47,7 @@ namespace ptr {
             for (int i = 1; i < level; i++)
             {
                 Check(address);
-                address = *(nuint*)address;
+                address = *(ulong*)address;
             }
 
             Check(address);
@@ -72,6 +72,13 @@ namespace ptr {
         // Allocation / free
         // ---------------------------------------------------------
 
+        public static ulong ptr_new(object value, string type)
+        {
+            ulong ptr = (ulong) NativeMemory.AllocZeroed(1, SizeOf(type));
+            DerefAss(ptr, 1, value, type);
+            return ptr;
+        }
+
         public static ulong ptr_fork(string type)
         {
             return (ulong)NativeMemory.AllocZeroed(1, SizeOf(type));
@@ -90,7 +97,7 @@ namespace ptr {
             if (address == 0)
                 return;
 
-            NativeMemory.Free((void*)(nuint)address);
+            NativeMemory.Free((void*)address);
         }
 
         // ---------------------------------------------------------
@@ -99,7 +106,7 @@ namespace ptr {
 
         public static dynamic Deref(ulong address, int level, string type)
         {
-            void* pointer = Resolve((nuint)address, level);
+            void* pointer = Resolve(address, level);
 
             return type switch
             {
@@ -129,7 +136,7 @@ namespace ptr {
 
         public static void DerefAss(ulong address, int level, object value, string type)
         {
-            void* pointer = Resolve((nuint)address, level);
+            void* pointer = Resolve(address, level);
 
             switch (type)
             {
@@ -193,6 +200,29 @@ namespace ptr {
             ulong offset = checked((count - 1) * size);
 
             return checked(address + offset);
+        }
+
+        public static ulong list_series_fork(object[] values, string type)
+        {
+            if (values == null || values.Length == 0)
+                throw new ArgumentOutOfRangeException(nameof(values), "List must not be empty");
+
+            ulong size = (ulong)SizeOf(type);
+            ulong baseAddr = (ulong)NativeMemory.AllocZeroed((nuint)values.Length, (nuint)size);
+
+            try
+            {
+                for (int i = 0; i < values.Length; i++)
+                    DerefAss(baseAddr + (ulong)i * size, 1, values[i], type);
+            }
+            catch
+            {
+                // value galat ho (jaise "abc" i32 mein) toh memory leak na ho
+                NativeMemory.Free((void*)baseAddr);
+                throw;
+            }
+
+            return baseAddr;
         }
     }
 }

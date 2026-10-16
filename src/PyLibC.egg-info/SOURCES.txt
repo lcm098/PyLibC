@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/PyLibC/__init__.py
+src/PyLibC.egg-info/PKG-INFO
+src/PyLibC.egg-info/SOURCES.txt
+src/PyLibC.egg-info/dependency_links.txt
+src/PyLibC.egg-info/requires.txt
+src/PyLibC.egg-info/top_level.txt
+src/PyLibC/bin/PyLibC.dll
+src/PyLibC/io/__init__.py
+src/PyLibC/io/printf.py
+src/PyLibC/pointers/__init__.py
+src/PyLibC/pointers/ptr.py

@@ -1,16 +1,19 @@
-# PyLibC/src/pointers/ptr.py
+# PyLibC/src/PyLibC/pointers/ptr.py
 
 import os
+from pathlib import Path
 from pythonnet import load
+import numpy as np
 
 load("coreclr")
 
 import clr
 
-dll_path = os.path.abspath("bin/Debug/net10.0/PyLibC.dll")
-clr.AddReference(dll_path)
+dll_path = Path(__file__).resolve().parents[1] / "bin" / "PyLibC.dll"
+clr.AddReference(str(dll_path))
 
-from ptr import Pointer as _CPointer   # C# class, renamed
+
+from ptr import Pointer as _CPointer 
 import System
 
 
@@ -67,3 +70,16 @@ class Pointer:
     @staticmethod
     def ptr_last_addr(address, size, type):
         return _CPointer.ptr_last_addr(address, size, type)
+
+    @staticmethod
+    def numpy_series_fork(np_array: np.ndarray, type):
+        array = np_array.ravel().tolist()
+        return _CPointer.list_series_fork(array, type)
+
+    @staticmethod
+    def list_series_fork(array, type):
+        return _CPointer.list_series_fork(array, type)
+
+    @staticmethod
+    def ptr_new(value, type):
+        return _CPointer.ptr_new(value, type)
